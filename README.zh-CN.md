@@ -6,8 +6,7 @@
 
 ## Usages
 
-![Usage](https://i.loli.net/2019/06/20/5d0aeeef3f6d714791.gif
-)
+![Usage](imgs/px2rpx.gif)
 
 ### 如何安装
 

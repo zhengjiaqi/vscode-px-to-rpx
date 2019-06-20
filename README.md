@@ -7,8 +7,7 @@ This is an extension for Visual Studio Code that allows you to convert px to rpx
 
 ## Usages
 
-![Usage](https://i.loli.net/2019/06/20/5d0aeeef3f6d714791.gif
-)
+![Usage](imgs/px2rpx.gif)
 
 ### Install
 
