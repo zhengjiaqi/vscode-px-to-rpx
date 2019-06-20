@@ -30,7 +30,7 @@ html vue swan wxml axml css wxss acss less scss sass stylus tpl
 
 ### 设置
 
-点击 VS Code 的 `文件 > 首选项 > 设置`，打开设置面板：
+点击 VS Code 的 `Code > 首选项 > 设置`，打开设置面板：
 
 + `px-to-rpx.baseWidth` 基准设计稿宽度 (单位: px), 默认值: 1242
 + `px-to-rpx.fixedDigits` `px` 转 `rpx` 小数点最大长度, 默认值: 3

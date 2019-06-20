@@ -31,7 +31,7 @@ html vue swan wxml axml css wxss acss less scss sass stylus tpl
 
 ### Configuration
 
-Open your user and workspace settings (`File > Preferences > Settings`):
+Open your user and workspace settings (`Code > Preferences > Settings`):
 
 + `px-to-rpx.baseWidth` base design view width (unit: px), default: 1242
 + `px-to-rpx.fixedDigits` `px` to `rpx` decimal point maximum length, default: 3
