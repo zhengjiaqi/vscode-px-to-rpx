@@ -18,8 +18,8 @@ ext install px-to-rpx
 ### How To Use
 
 + Smart snippet: (e.g.) input `20px`
-+ CLI: Press `F1`, enter `px2px` or  `px2px in selection`
-+ Context Menu: `px2px` or  `px2px in selection`
++ CLI: Press `F1`, enter `px2rpx` or  `px2rpx in selection`
++ Context Menu: `px2rpx` or  `px2rpx in selection`
 
 ### Keybindings
 * `Cmd+Alt+P` Px to rpx

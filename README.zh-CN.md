@@ -17,8 +17,8 @@ ext install px-to-rpx
 ### 如何使用
 
 + css文件智能代码提示，如：输入 `20px` 智能提示转化后 `rpx` 值
-+ 通过 `F1` 命令面板执行：`px2px` 或 `px2px in selection` 命令
-+ 通过右键菜单执行：`px2px` 或 `px2px in selection` 命令
++ 通过 `F1` 命令面板执行：`px2rpx` 或 `px2rpx in selection` 命令
++ 通过右键菜单执行：`px2rpx` 或 `px2rpx in selection` 命令
 
 ### 快捷键
 * `Cmd+Alt+P` 当前文件 px 转为 rpx

@@ -2,7 +2,7 @@
     "name": "px-to-rpx",
     "displayName": "px to rpx",
     "description": "This is an extension for Visual Studio Code that allows you to convert px to rpx.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "zhengjiaqi",
     "repository": "https://github.com/zhengjiaqi/vscode-px-to-rpx",
     "engines": {
