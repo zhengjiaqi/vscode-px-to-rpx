@@ -1,0 +1,7 @@
+{
+	"extension.px2rpx.title": "转换 px 为 rpx",
+	"extension.px2rpxInSelection.title": "转换选定代码 px 为 rpx",
+	"extension.baseWidth.title": "基准设计稿宽度 (单位: px), 默认值: 1242",
+	"extension.fixedDigits.title": "px 转 rpx 小数点最大长度，默认值: 3",
+	"extension.autoRemovePrefixZero.title": "自动移除0开头的前缀，默认值: false"
+}

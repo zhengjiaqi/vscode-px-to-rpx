@@ -1,0 +1,7 @@
+{
+	"extension.px2rpx.title": "px2rpx",
+    "extension.px2rpxInSelection.title": "px2rpx in selection",
+    "extension.baseWidth.title": "Base design view width (unit: px), default 1242",
+    "extension.fixedDigits.title": "Px to rpx decimal point maximum length, default: 3",
+    "extension.autoRemovePrefixZero.title": "Automatically remove prefix 0, default: false"
+}

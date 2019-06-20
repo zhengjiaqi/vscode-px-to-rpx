@@ -1,0 +1,124 @@
+{
+    "name": "px-to-rpx",
+    "displayName": "px to rpx",
+    "description": "This is an extension for Visual Studio Code that allows you to convert px to rpx.",
+    "version": "0.0.1",
+    "publisher": "zhengjiaqi",
+    "repository": "https://github.com/zhengjiaqi/vscode-px-to-rpx",
+    "engines": {
+        "vscode": "^1.35.0"
+    },
+    "categories": [
+        "Formatters",
+        "Snippets",
+        "Other"
+    ],
+    "keywords": [
+        "px2rpx",
+        "rpx",
+        "px",
+        "px to rpx"
+    ],
+    "icon": "imgs/pxToRpxIcon.png",
+    "activationEvents": [
+        "onLanguage:html",
+        "onLanguage:vue",
+        "onLanguage:swan",
+        "onLanguage:wxml",
+        "onLanguage:axml",
+        "onLanguage:css",
+        "onLanguage:wxss",
+        "onLanguage:acss",
+        "onLanguage:less",
+        "onLanguage:scss",
+        "onLanguage:sass",
+        "onLanguage:stylus",
+        "onLanguage:tpl"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.px2rpx",
+                "title": "%extension.px2rpx.title%"
+            },
+            {
+                "command": "extension.px2rpxInSelection",
+                "title": "%extension.px2rpxInSelection.title%"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.px2rpx",
+                "key": "cmd+Alt+p"
+            },
+            {
+                "command": "extension.px2rpxInSelection",
+                "key": "Alt+shift+p"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "when": "editorFocus",
+                    "command": "extension.px2rpx",
+                    "group": "6_px"
+                },
+                {
+                    "when": "editorHasSelection",
+                    "command": "extension.px2rpxInSelection",
+                    "group": "6_px"
+                }
+            ]
+        },
+        "configuration": {
+            "type": "object",
+            "title": "px-to-rpx configuration",
+            "properties": {
+                "px-to-rpx.baseWidth": {
+                    "type": "number",
+                    "default": 1242,
+                    "description": "%extension.baseWidth.title%"
+                },
+                "px-to-rpx.fixedDigits": {
+                    "type": "number",
+                    "default": 3,
+                    "description": "%extension.fixedDigits.title%"
+                },
+                "px-to-rpx.autoRemovePrefixZero": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "%extension.autoRemovePrefixZero.title%"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test",
+        "package": "gulp package",
+        "build": "gulp build",
+        "publish": "gulp publish"
+    },
+    "devDependencies": {
+        "vscode": "^1.1.28",
+        "@types/node": "^10.12.21",
+        "@types/mocha": "^2.2.42",
+        "del": "^4.1.1",
+        "event-stream": "^4.0.1",
+        "gulp": "^4.0.2",
+        "gulp-filter": "^5.1.0",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-typescript": "^5.0.1",
+        "run-sequence": "^2.2.1",
+        "tslint": "^5.16.0",
+        "typescript": "^3.5.1",
+        "vsce": "^1.63.0",
+        "vscode-nls-dev": "^3.2.6"
+    },
+    "dependencies": {
+        "vscode-nls": "^4.1.1"
+    }
+}
