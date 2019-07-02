@@ -84,3 +84,10 @@ gulp.task('build', buildTask);
 gulp.task('publish', gulp.series(buildTask, vscePublishTask));
 
 gulp.task('package', gulp.series(buildTask, vscePackageTask));
+
+gulp.task('watch-build', function () {
+    buildTask();
+    gulp.watch('*.ts', gulp.series(buildTask));
+    gulp.watch('./i18n/**/*.json', gulp.series(buildTask));
+    gulp.watch('./package.json', gulp.series(buildTask));
+});

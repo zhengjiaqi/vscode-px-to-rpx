@@ -100,7 +100,8 @@
         "test": "npm run compile && node ./node_modules/vscode/bin/test",
         "package": "gulp package",
         "build": "gulp build",
-        "publish": "gulp publish"
+        "publish": "gulp publish",
+        "dev": "gulp watch-build"
     },
     "devDependencies": {
         "vscode": "^1.1.28",
