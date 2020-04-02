@@ -3,7 +3,7 @@
 'use strict';
 import * as vscode from 'vscode';
 import { CssRpxProcess } from './process';
-import { CssRpxProvider } from './provider';
+import { TestProvider } from './provider';
 
 let config = null;
 // this method is called when your extension is activated
@@ -11,7 +11,8 @@ let config = null;
 export function activate(context: vscode.ExtensionContext) {
     config = vscode.workspace.getConfiguration("px-to-rpx");
     const process = new CssRpxProcess(config);
-    let provider = new CssRpxProvider(process);
+	let provider = new TestProvider();
+	vscode.languages.registerCompletionItemProvider('javascript', provider);
     const LANS = ['html', 'vue', "swan", "wxml", "axml", 'css', "wxss", "acss", 'less', 'scss', 'sass', 'stylus', 'wxss', 'acss'];
     for (let lan of LANS) {
         let providerDisposable = vscode.languages.registerCompletionItemProvider(lan, provider);
@@ -43,9 +44,15 @@ export function activate(context: vscode.ExtensionContext) {
         textEditor.edit(builder => {
             builder.replace(selection, process.convertAll(text));
         });
+	});
+	
+	let disposable2 = vscode.commands.registerTextEditorCommand('doc', (textEditor, edit, params3) => {
+		console.log('###params3:', params3)
     });
+	context.subscriptions.push(disposable2);
 
-    context.subscriptions.push(disposable);
+	context.subscriptions.push(disposable);
+
 }
 
 // this method is called when your extension is deactivated
